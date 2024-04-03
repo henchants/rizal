@@ -33,6 +33,7 @@ nav a {
     padding: 10px 20px;
 }
 
+
 nav a:hover {
     background-color: #555;
 }
@@ -89,14 +90,6 @@ footer {
     z-index: 1;
 }
 
-
-.swiper-slide img {
-    width: 100%; /* Ensure all images take up the full width of their container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Ensure images don't exceed their container's width */
-    height: 1000px; /* Set the height to a fixed value */
-}
-
 /* Custom styles for Swiper slider */
 .swiper-container {
     border: 1px solid #ccc; /* Add border to Swiper container */
@@ -111,9 +104,40 @@ footer {
 .swiper-slide {
     text-align: center;
     padding: 20px;
+    margin-right: 20px; /* Add margin to create space between slides */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.swiper-slide img {
+    max-width: 100%; /* Adjust the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 1000px; /* Set the maximum height to a fixed value */
 }
 
 .swiper-slide a {
-    color: #007bff;
+    color: blue; /* Set link color to blue */
     text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Hover effect for "Read more" links */
+.swiper-slide a:hover {
+    color: red; /* Change link color to red on hover */
+}
+
+/* Styling for Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: rgba(128, 128, 128, 0.5); /* Translucent grey background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Padding around the button text */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+/* Hover effect for Swiper navigation buttons */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: rgba(128, 128, 128, 0.7); /* Darker translucent grey background color on hover */
 }

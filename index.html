@@ -16,6 +16,8 @@
         <a href="#" onclick="showTab('biography')">Biography</a>
         <a href="#" onclick="showTab('novels')">Novels</a>
         <a href="#" onclick="showTab('characters')">Characters</a>
+        <a href="#" onclick="showTab('essays')">Essays</a>
+
     </nav>
     <div class="content">
         <div class="container" id="novels">
@@ -24,23 +26,29 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="imgs/elfili.png">
-                        <h3>El Filibusterismo</h3>
-                        <p>Summary of El Filibusterismo</p>
-                        <a href="el_filibusterismo.html">Read more</a>
-                    </div>
-                    <div class="swiper-slide">
                         <img src="imgs/noli.jpg">
                         <h3>Noli Me Tangere</h3>
                         <p>Summary of Noli Me Tangere</p>
                         <a href="noli_me_tangere.html">Read more</a>
                     </div>
+                    
+                    <div class="swiper-slide">
+                        <img src="imgs/elfili.png">
+                        <h3>El Filibusterismo</h3>
+                        <p>Summary of El Filibusterismo</p>
+                        <a href="el_filibusterismo.html">Read more</a>
+                    </div>
+                    
                     <div class="swiper-slide">
                         <h3>Mi Último Adiós</h3>
+                        <img src="imgs/ultimo.jpg">
                         <p>Summary of Mi Último Adiós</p>
                         <a href="mi_ultimo_adios.html">Read more</a>
                     </div>
                 </div>
+                <!-- Add navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
         <div class="container" id="biography" style="display: none;">
@@ -48,7 +56,7 @@
                 <img class="jose-rizal" src="imgs/jose rizal.jpg">
                 <div class="info">
                     <h2>Early Life</h2>
-                    <p>José Protasio Rizal Mercado y Alonso Realonda, commonly known as José Rizal, was born on June 19, 1861, in Calamba, Laguna, Philippines. He was the seventh child of Francisco Mercado Rizal and Teodora Alonso Realonda. His parents were prosperous landowners and influential members of the community. Rizal's family had a mixed lineage of Chinese, Spanish, and indigenous Filipino descent.</p>
+                    <p><u>José Protasio Rizal Mercado y Alonso Realonda</u>, commonly known as <u>José Rizal</u>, was born on <u>June 19, 1861</u>, in <u>Calamba, Laguna, Philippines</u>. He was the seventh child of <u>Francisco Mercado Rizal</u> and <u>Teodora Alonso Realonda</u>. His parents were prosperous landowners and influential members of the community. Rizal's family had a mixed lineage of Chinese, Spanish, and indigenous Filipino descent.</p>
                     </div>
                     </div>
                     <div>
@@ -78,9 +86,11 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper('.swiper-container', {
-            pagination: {
-                el: '.swiper-pagination',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
+            // other swiper options...
         });
 
         function showTab(tabName) {
