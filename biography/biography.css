@@ -1,0 +1,86 @@
+/* CSS styling */
+body {
+    background-image: url('imgs/rizalwriting.jpg'); 
+    background-repeat: no-repeat;
+    background-size: auto; /* Keep the original size of the background image */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Added position relative */
+    z-index: 1; /* Ensure header is above the background image */
+}
+
+nav {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Added position relative */
+    z-index: 1; /* Ensure nav is above the background image */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Set background to be opaque white */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Added position relative */
+    z-index: 1; /* Ensure container is above the background image */
+}
+
+.centered-container {
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Custom styles for Swiper slider */
+.swiper-slide img {
+    width: 100%; /* Ensure all images take up the full width of their container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure images don't exceed their container's width */
+    height: 1000px; /* Set the height to a fixed value */
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Rizal and His Novels</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <h1>Jose Rizal and His Novels</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showTab('biography')">Biography</a>
+        <a href="#" onclick="showTab('novels')">Novels</a>
+        <a href="#" onclick="showTab('characters')">Characters</a>
+    </nav>
+    <div class="content">
+        <div class="container" id="novels">
+            <h2>Novels</h2>
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="imgs/elfili.png">
+                        <h3>El Filibusterismo</h3>
+                        <p>Summary of El Filibusterismo</p>
+                        <a href="el_filibusterismo.html">Read more</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/noli.jpg">
+                        <h3>Noli Me Tangere</h3>
+                        <p>Summary of Noli Me Tangere</p>
+                        <a href="noli_me_tangere.html">Read more</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <h3>Mi Último Adiós</h3>
+                        <p>Summary of Mi Último Adiós</p>
+                        <a href="mi_ultimo_adios.html">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="biography" style="display: none;">
+            <div class="centered-container" class="bio">
+                <img class="jose-rizal" src="imgs/jose rizal.jpg">
+                <div class="info">
+                    <h2>Early Life</h2>
+                    <p>José Protasio Rizal Mercado y Alonso Realonda, commonly known as José Rizal, was born on June 19, 1861, in Calamba, Laguna, Philippines. He was the seventh child of Francisco Mercado Rizal and Teodora Alonso Realonda. His parents were prosperous landowners and influential members of the community. Rizal's family had a mixed lineage of Chinese, Spanish, and indigenous Filipino descent.</p>
+                    </div>
+                    </div>
+                    <div>
+                    <h2>Education</h2>
+                    <p>Rizal began his early education at home under private tutors, including his mother. At the age of 11, he enrolled at the Ateneo Municipal de Manila, a Jesuit-run school in Intramuros, Manila. He excelled in his studies and was recognized for his intellectual abilities. In 1877, he moved to Manila to study at the Ateneo Municipal de Manila, where he obtained a Bachelor of Arts degree.</p>
+                    <p>In 1882, Rizal traveled to Spain to pursue higher education. He enrolled at the Universidad Central de Madrid, where he studied medicine and later received a degree in ophthalmology. During his time in Europe, Rizal also pursued studies in philosophy, literature, and the sciences.</p>
+
+                    <h2>Literary and Intellectual Contributions</h2>
+                    <p>Throughout his life, Rizal was an accomplished writer, poet, and intellectual. He was proficient in multiple languages, including Spanish, English, German, French, and Latin. Rizal's literary works played a significant role in shaping Filipino national consciousness and inspiring the Filipino nationalist movement.</p>
+                    <p>His two most famous novels, "Noli Me Tangere" (Touch Me Not) and "El Filibusterismo" (The Filibuster), exposed the injustices and abuses of Spanish colonial rule in the Philippines. These novels were instrumental in awakening nationalistic sentiments among Filipinos and advocating for social reform.</p>
+
+                    <h2>Nationalist Activism</h2>
+                    <p>Rizal was not only a literary figure but also a dedicated nationalist and social reformer. He actively participated in the Propaganda Movement, a Filipino reformist movement advocating for political and social reforms within the Spanish colonial system. Rizal's writings and advocacy for reforms earned him the ire of the Spanish authorities, who viewed him as a threat to their colonial rule.</p>
+                    <p>Despite facing persecution and surveillance from the Spanish authorities, Rizal continued to fight for the rights and welfare of the Filipino people. He founded La Liga Filipina, a civic organization aimed at promoting national unity and social reforms. However, the organization was short-lived, as Rizal was arrested and exiled to Dapitan, a remote town in Mindanao, in 1892.</p>
+
+                    <h2>Martyrdom and Legacy</h2>
+                    <p>Rizal's activism and nationalist sentiments eventually led to his arrest, trial, and execution by the Spanish authorities on December 30, 1896. He was executed by firing squad at Bagumbayan (now Rizal Park) in Manila, sparking outrage and condemnation both locally and internationally.</p>
+                    <p>Although his life was cut short at the age of 35, José Rizal's legacy as a national hero and martyr continues to inspire generations of Filipinos. His ideals of freedom, justice, and national unity remain deeply ingrained in Filipino society and culture. Rizal's contributions to literature, education, and the struggle for independence have cemented his place as one of the greatest Filipino patriots and intellectuals of all time.</p>
+            </div>
+    </div>
+    <footer>
+        &copy; 2024 Jose Rizal Fan Club
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+
+        function showTab(tabName) {
+            var tabs = document.querySelectorAll('.container');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = 'none';
+            }
+            document.getElementById(tabName).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
